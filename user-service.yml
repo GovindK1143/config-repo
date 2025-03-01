@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: USER-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/users_db
+    username: root
+    password: Govind@1143
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+spring.security:
+  basic:
+    enabled: false
+  main:
+    allow-bean-definition-overriding: true
