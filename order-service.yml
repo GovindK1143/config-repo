@@ -37,3 +37,8 @@ resilience4j:
           - java.net.ConnectException
           - java.util.concurrent.TimeoutException
           - org.springframework.web.client.HttpServerErrorException
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,circuitbreakers
