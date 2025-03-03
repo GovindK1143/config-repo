@@ -3,29 +3,29 @@ server:
 
 spring:
   application:
-    name: API-GATEWAY
+    name: api-gateway
   main:
     web-application-type: reactive
   cloud:
     gateway:
       routes:
-        - id: AUTH-SERVICE
+        - id: auth-service
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/auth/**
-        - id: USER-SERVICE
+        - id: user-service
           uri: lb://USER-SERVICE
           predicates:
             - Path=/users/**
-        - id: PRODUCT-SERVICE
+        - id: product-service
           uri: lb://PRODUCT-SERVICE
           predicates:
             - Path=/products/**
-        - id: ORDER-SERVICE
+        - id: order-service
           uri: lb://ORDER-SERVICE
           predicates:
             - Path=/orders/**
-        - id: PAYMENT-SERVICE
+        - id: payment-service
           uri: lb://PAYMENT-SERVICE
           predicates:
             - Path=/payments/**
