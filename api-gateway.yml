@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: api-gateway
+    name: API-GATEWAY
   main:
     web-application-type: reactive
   cloud:
@@ -37,4 +37,5 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
   instance:
+    instance-id: ${spring.application.name}:${server.port}  # Ensure Eureka registers it correctly
     hostname: localhost
