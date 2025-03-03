@@ -4,23 +4,13 @@ server:
 spring:
   application:
     name: API-GATEWAY
-  main:
-    web-application-type: reactive
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
-          lower-case-service-id: true  # Ensure service names are lowercase
+          lower-case-service-id: true
       routes:
-        - id: AUTH-SERVICE
-          uri: lb://AUTH-SERVICE
-          predicates:
-            - Path=/auth/**
-        - id: USER-SERVICE
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/users/**
         - id: PRODUCT-SERVICE
           uri: lb://PRODUCT-SERVICE
           predicates:
@@ -33,6 +23,10 @@ spring:
           uri: lb://PAYMENT-SERVICE
           predicates:
             - Path=/payments/**
+        - id: AUTH-SERVICE
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/auth/**
 
 eureka:
   client:
