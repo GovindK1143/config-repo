@@ -29,7 +29,9 @@ spring:
           uri: lb://PAYMENT-SERVICE
           predicates:
             - Path=/payments/**
-
+      discovery:
+        locator:
+          enabled: true
 eureka:
   client:
     register-with-eureka: true
