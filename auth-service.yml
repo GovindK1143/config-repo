@@ -5,7 +5,7 @@ spring:
   application:
     name: auth-service
   datasource:
-    url: jdbc:mysql://host.docker.internal:3306/users_db
+    url: jdbc:mysql://localhost:3306/users_db
     username: root
     password: Govind@1143
   jpa:
@@ -17,8 +17,8 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server:8761/eureka
+      defaultZone: http://localhost:8761/eureka
     register-with-eureka: true
     fetch-registry: true
   instance:
-    hostname: auth-service
+    hostname: localhost
