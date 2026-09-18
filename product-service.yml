@@ -17,3 +17,5 @@ spring.security:
   user:
     name: admin
     password: admin
+jwt:
+  secret: mysupersecretkeywhichislongenough
