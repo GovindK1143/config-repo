@@ -4,10 +4,12 @@ server:
 spring:
   application:
     name: order-service
+
   datasource:
     url: jdbc:mysql://localhost:3306/order_db
     username: root
     password: root
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -21,7 +23,7 @@ eureka:
     fetch-registry: true
 
 jwt:
-  secret: mysecretmysecretmysecretmysecret
+  secret: mysupersecretkeywhichislongenough
 
 resilience4j:
   circuitbreaker:
@@ -37,6 +39,7 @@ resilience4j:
           - java.net.ConnectException
           - java.util.concurrent.TimeoutException
           - org.springframework.web.client.HttpServerErrorException
+
 management:
   endpoints:
     web:
