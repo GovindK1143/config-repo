@@ -38,7 +38,6 @@ resilience4j:
           - java.util.concurrent.TimeoutException
           - feign.FeignException
           - feign.RetryableException
-          - feign.FeignException$InternalServerError
 
 management:
   endpoints:
