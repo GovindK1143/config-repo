@@ -36,6 +36,8 @@ resilience4j:
         recordExceptions:
           - java.net.ConnectException
           - java.util.concurrent.TimeoutException
+          - feign.FeignException
+          - feign.RetryableException
           - feign.FeignException$InternalServerError
 
 management:
