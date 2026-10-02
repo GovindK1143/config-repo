@@ -39,11 +39,7 @@ resilience4j:
         minimumNumberOfCalls: 5
         automaticTransitionFromOpenToHalfOpenEnabled: true
         recordExceptions:
-          - java.net.ConnectException
-          - java.util.concurrent.TimeoutException
-          - feign.FeignException
-          - feign.RetryableException
-
+          - java.lang.Exception
 management:
   endpoints:
     web:
