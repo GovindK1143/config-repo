@@ -23,3 +23,12 @@ spring.security:
     password: admin
 jwt:
   secret: mysupersecretkeywhichislongenough
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when-authorized
