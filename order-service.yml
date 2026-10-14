@@ -62,7 +62,7 @@ management:
 
 quickmart:
   payment-recovery:
-    enabled: false
+    enabled: true
     initial-delay-ms: 15000
     fixed-delay-ms: 15000
     retry-interval-seconds: 30
