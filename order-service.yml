@@ -58,3 +58,13 @@ management:
   endpoint:
     health:
       show-details: when-authorized
+
+
+quickmart:
+  payment-recovery:
+    enabled: false
+    initial-delay-ms: 15000
+    fixed-delay-ms: 15000
+    retry-interval-seconds: 30
+    batch-size: 10
+
