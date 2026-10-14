@@ -1,9 +1,13 @@
+
 server:
   port: 8086
 
 spring:
   application:
     name: cart-service
+
+  kafka:
+    bootstrap-servers: localhost:9092
 
   datasource:
     url: jdbc:mysql://localhost:3306/cart_db
@@ -23,6 +27,10 @@ spring:
 jwt:
   secret: mysupersecretkeywhichislongenough
 
+payment:
+  status:
+    topic: payment.status.topic
+
 eureka:
   client:
     service-url:
@@ -40,6 +48,7 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
         recordExceptions:
           - feign.FeignException
+
 management:
   endpoints:
     web:
