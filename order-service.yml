@@ -23,6 +23,7 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
+
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
@@ -46,6 +47,7 @@ resilience4j:
           - java.net.ConnectException
           - java.util.concurrent.TimeoutException
           - org.springframework.web.client.HttpServerErrorException
+
   retry:
     instances:
       productStockRetry:
@@ -61,7 +63,6 @@ management:
     health:
       show-details: when-authorized
 
-
 quickmart:
   payment-recovery:
     enabled: true
@@ -69,4 +70,3 @@ quickmart:
     fixed-delay-ms: 15000
     retry-interval-seconds: 30
     batch-size: 10
-
