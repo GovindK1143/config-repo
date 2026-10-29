@@ -4,10 +4,12 @@ server:
 spring:
   application:
     name: user-service
+
   datasource:
     url: jdbc:mysql://localhost:3306/users_db
     username: root
     password: root
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,15 +19,24 @@ spring:
     redis:
       host: localhost
       port: 6379
+
+  main:
+    allow-bean-definition-overriding: true
+
+  security:
+    basic:
+      enabled: false
+
 eureka:
   instance:
     prefer-ip-address: true
 
-spring.security:
-  basic:
-    enabled: false
-  main:
-    allow-bean-definition-overriding: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+
 jwt:
   secret: mysupersecretkeywhichislongenough
 
