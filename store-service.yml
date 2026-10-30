@@ -8,7 +8,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/store_db
     username: root
-    password: root
+    password: ${QUICKMART_DB_PASSWORD}
 
   jpa:
     hibernate:
@@ -22,7 +22,7 @@ spring:
         format_sql: true
 
 jwt:
-  secret: mysupersecretkeywhichislongenough
+  secret: ${QUICKMART_JWT_SECRET}
 
 eureka:
   instance:
