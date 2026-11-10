@@ -20,6 +20,8 @@ spring:
         jdbc:
           time_zone: UTC
         format_sql: true
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
 
 jwt:
   secret: mysupersecretkeywhichislongenough
@@ -43,3 +45,10 @@ management:
   endpoint:
     health:
       show-details: when-authorized
+
+inventory:
+  kafka:
+    outbox-topic: quickmart.inventory.events
+
+  outbox:
+    poll-interval-ms: 1000
