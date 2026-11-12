@@ -2,6 +2,7 @@ quickmart:
   security:
     internal:
       order-service-key: ${ORDER_INVENTORY_SERVICE_KEY}
+      store-service-key: ${INVENTORY_STORE_SERVICE_KEY}
 server:
   port: 8088
 
