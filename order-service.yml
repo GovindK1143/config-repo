@@ -1,3 +1,7 @@
+quickmart:
+  security:
+    internal:
+      inventory-service-key: ${ORDER_INVENTORY_SERVICE_KEY}
 server:
   port: 8083
 
