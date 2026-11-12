@@ -1,4 +1,7 @@
-
+quickmart:
+  security:
+    internal:
+      inventory-service-key: ${INVENTORY_STORE_SERVICE_KEY}
 server:
   port: 8087
 
